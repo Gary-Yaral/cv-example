@@ -1,0 +1,544 @@
+/* -- Estilos generales responsivos--*/
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Palanquin', sans-serif;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    min-height:100vh;
+}
+
+.container{
+    width:793.7px;
+    min-height:100vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .8fr 3.2fr .1fr;
+    grid-template-areas: 
+    "main main"
+    "c-left c-right"
+    "footer footer";
+}
+
+.main{
+    grid-area: main;
+    background:#52CBD9;
+    min-height: 200px;
+}
+
+.column__left{
+    grid-area: c-left;
+}
+
+.column__right{
+    grid-area: c-right;
+}
+
+footer{
+    grid-area: footer;
+}
+
+/* -- Estilos del main -- */
+.main{
+    padding:10px;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr 2fr;
+    grid-template-areas: 
+    "top"
+    "empty"
+    "bottom";
+    font-family: 'Palanquin', sans-serif;
+    border-bottom: 6px solid #0A5B68;
+}
+
+.shadow{
+    height:100%;
+    background:#00ABBB;
+    
+}
+
+.empty{
+    grid-area:empty;
+}
+
+.shadow-top{
+    grid-area:top;
+    clip-path: polygon(0% 0%, 0px 100%, 100% 50%, 100% 0%);
+    
+}
+
+.shadow-bottom{
+    grid-area:bottom;
+    clip-path: polygon(0% 50%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.image{
+    color:#fff;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 150px;
+    height:150px;
+    border-radius:50%;
+    background:#038C8C;
+    position:absolute;
+    margin-left:20px;
+    top: 25px;
+    z-index:99;
+    border: 10px solid#0A5B68;
+}
+
+.image img{
+    border-radius: 50%;
+    width:100%;
+    height:100%;
+}
+
+.personal{
+    width: 6%;
+    height:100%;
+    margin-left:10%;
+}
+
+.personal__data{
+    max-width: 680px;
+    z-index:98;
+    text-align:center;
+    background:#1B3438;
+    position:absolute;
+    color: #fff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personal__data-name{
+    width:85%;
+    height: 60px;
+    top: 35px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.personal__data-title{
+    height: 40px;
+    top: 100px;
+    font-weight: 700;
+    min-width:400px;
+    width:35%;
+    display:flex;
+    justify-content: flex-end; 
+}
+
+.personal__data-title,
+.personal__data-info{
+    min-width:400px;
+    width: 35%;
+}
+
+
+
+.personal__data-title label{
+    margin-right: 20px;
+    color:#16b4cc;
+}
+
+.personal__data-info{
+    background: rgba(0,0,0,0);
+    height: 50px;
+    top: 150px;
+    font-weight: 100;
+    line-height: 1em;
+    display:flex;
+    justify-content: flex-end; 
+}
+
+.personal__data-info label{
+    margin-right: 20px;
+}
+
+/* -- FIN -- */
+
+
+/* -- Estilos generales de las 2 columnas principales--*/
+.column__left,
+.column__right{
+    display:flex;
+}
+
+
+.column__left{
+    justify-content: flex-end;
+    
+}
+
+.left__padding,
+.left__primary{
+    height:100%;
+}
+.left__padding{
+    width: 10%;
+}
+
+.left__primary{
+    width: 90%;
+    background: #1B3439;
+    border-right: 5px solid #d0d1d1;
+    border-left: 10px solid #d0d1d1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:.5fr .5fr 1fr;
+}
+
+.column__right{
+    justify-content: flex-start;
+
+}
+
+.right__secondary{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr;
+    width: 100%;
+    height:100%;
+    background: #fff;
+    border-left: 5px solid #d0d1d1;
+}
+
+.left__padding,
+.right__secondary{
+    border-top: 10px solid #d0d1d1;
+}
+
+/* -- FIN --*/
+
+/* Estilo generales 
+para los bloques 
+INFO, EDUCACIóN y SKILLS --*/
+.box__title{
+    width:90%;
+    background:#52CBD9;
+    font-weight: bolder;
+    height: 40px;
+    margin-top: 20px;
+    z-index: 99;
+    position:absolute;
+}
+.box__title-after{
+    background:#2d4c50;
+    position:relative;
+    z-index:1;
+    margin-top: 25px;
+    width:92%;
+
+}
+
+.box__title-after-right{
+    background:#2d4c50;
+    position:relative;
+    z-index:1;
+    margin-top: 25px;
+    width:92%;
+    align-self:flex-end;
+}
+
+.content__box{
+    font-family: 'Palanquin', sans-serif;
+    display:flex;
+    flex-direction:column;
+    color:#fff;
+    position: relative;
+    z-index: 99;
+    position:relative;
+    
+}
+
+.box__info{
+    margin-left: 35px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* -- Estilos para el bloque INFO --*/
+
+.title__label-info,
+.title__label-education,
+.title__label-skills{ 
+    margin-left: 60px;
+    display: flex;
+    align-items: center;
+    height:100%;
+}
+
+/*-- FIN --*/
+
+
+/*--Estilo del bloque EDUCACIÓN --*/
+.box__title-education{
+    align-self: flex-end;
+}
+/* -- fin --*/
+
+/*-- barras de progreso --*/
+.progress__bar{
+    height:10px;
+    width:80%;
+    background:#16b4cc;
+    display:flex;
+    justify-content: flex-end;
+    border-radius:10px;
+}
+
+.bar__circle{
+    height:12px;
+    width:12px;
+    background:#fff;
+    border-radius: 50%;
+    border: 2px solid #0A5B68;
+}
+
+
+/* -- fin -- */
+
+/* Estilos de la segunda columna -- */
+
+.secondary__topic{
+    padding:30px;
+}
+
+
+.secondary__topic-top,
+.secondary__topic-bottom
+{
+    background:#fff;
+}
+
+
+.topic__head{
+    width: 100%;
+    background:#52CBD9;
+    position: relative;
+    border:none;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size:1.5rem;
+    color:#fff;
+}
+
+.head__semitriangle{
+    width:100%;
+    background: #00ABBB;
+    height:100%;
+    position: absolute;
+    z-index:5;
+}
+
+.head__semitriangle-left{
+    clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+}
+
+.head__semitriangle-right{
+    clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+}
+
+.head__text{
+    position: relative;
+    z-index:10;
+    height:100%;
+    border:none;
+}
+
+.topic__experience{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+}
+
+.experience__date,
+.experience__enterprice{
+    font-size:1rem;
+    font-weight: 600;
+}
+
+.experience__date{
+    color:#b4b4b4;
+}
+
+.experience__enterprice{
+    color:#00ABBB;
+}
+
+.experience__description{
+    font-size:.8rem;
+    color:#1B3439;
+    font-weight: 300;
+}
+
+.experience__separator{
+    border: 1px solid #00ABBB;
+}
+
+.progress__bar-lang{
+    height:10px;
+    width:80%;
+    background:#708083;
+    display:flex;
+    border-radius:10px;
+    position: relative;
+}
+
+.bar__level{
+    width: 50%;
+    background:#00ABBB;
+    height: 100%;
+    align-self: flex-start;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+}
+
+.bar__circle-after{
+    position:absolute;
+    margin-left:49%;
+}
+
+/* -- fin --*/
+
+
+/* Estilos del footer --*/
+footer{
+    background:#00ABBB;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    color:#ffffff;
+}
+
+/* --fin --*/
+
+/*--iconos fontawesome--*/
+.fas{
+    margin-right: 10px;
+}
+
+/*-------------------*/
+
+/* -- media query--*/
+@media screen and (max-width:700px){
+    .personal__data-name{
+        margin-left:5%;
+        width:80%;
+    }
+}
+
+
+@media screen and (max-width:577px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 2fr 2fr .1fr;
+        grid-template-areas: 
+        "main"
+        "c-left"
+        "c-right"
+        "footer";
+    }
+
+    .personal__data-name{
+        margin-left:5%;
+        width:76%;
+        justify-content: flex-end;
+    }
+
+    .personal__data-name label{
+        margin-right:20px;
+    }
+
+    .personal__data-title,
+    .personal__data-info{
+        margin-left:5%;
+        width:60%;
+        min-width: 200px;
+    }
+    
+}
+
+@media screen and (max-width:450px){
+    .image{
+        margin-left:0px;
+    }
+    .personal__data-name{
+        font-size:1.5rem
+    }
+
+    .personal__data-title,
+    .personal__data-info{
+        font-size:.8rem;
+        margin-left:5%;
+        width:76%;
+        justify-content: flex-end;
+    }
+    
+       
+}
+
+@media screen and (max-width:359px){
+
+    .container{
+        min-width:272px;
+    }
+    
+    .image{
+        margin-left:0px;
+        width:100px;
+        height:100px;
+
+    }
+    .personal__data-name{
+        font-size:1rem
+    }
+
+    .personal__data-title,
+    .personal__data-info{
+        font-size:.5rem;
+        margin-left:6%;
+        width:76%;
+        justify-content: flex-end;
+    }   
+}
+
+@media screen and (max-width:300px){
+    .topic__head{
+        font-size:1.2rem;
+    }
+
+}
+
+
+
+@media print{
+    body{
+        -webkit-print-color-adjust: exact; /*economy | exact*/
+        color-adjust: exact;
+    }
+}
+
+/* -- FIN --*/
+
+
+
+
+
+
